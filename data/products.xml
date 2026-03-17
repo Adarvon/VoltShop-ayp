@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- VoltShop — данные каталога товаров (products.xml) -->
+<catalog>
+  <categories>
+    <category id="tv"><name>Телевизоры</name><count>248</count></category>
+    <category id="fridge"><name>Холодильники</name><count>156</count></category>
+    <category id="washer"><name>Стиральные машины</name><count>203</count></category>
+    <category id="oven"><name>Плиты</name><count>189</count></category>
+    <category id="ac"><name>Кондиционеры</name><count>94</count></category>
+  </categories>
+  <products>
+    <product id="1" category="tv">
+      <brand>Samsung</brand>
+      <name>QLED 55" Smart TV 4K Ultra HD 2024</name>
+      <price>49990</price>
+      <old_price>66990</old_price>
+      <badge>sale</badge>
+      <rating>4.9</rating>
+      <reviews>284</reviews>
+      <in_stock>true</in_stock>
+    </product>
+    <product id="2" category="tv">
+      <brand>LG</brand>
+      <name>OLED 65" Evo Gallery G3</name>
+      <price>89990</price>
+      <badge>new</badge>
+      <rating>4.9</rating>
+      <reviews>119</reviews>
+      <in_stock>true</in_stock>
+    </product>
+    <product id="3" category="fridge">
+      <brand>Bosch</brand>
+      <name>Холодильник KGN56LW30U No Frost</name>
+      <price>62500</price>
+      <badge>hit</badge>
+      <rating>4.7</rating>
+      <reviews>147</reviews>
+      <in_stock>true</in_stock>
+    </product>
+    <product id="4" category="washer">
+      <brand>LG</brand>
+      <name>Стиральная машина FH4G1VS9 9кг A+++</name>
+      <price>38990</price>
+      <old_price>43000</old_price>
+      <badge>new</badge>
+      <rating>4.8</rating>
+      <reviews>96</reviews>
+      <in_stock>true</in_stock>
+    </product>
+  </products>
+</catalog>

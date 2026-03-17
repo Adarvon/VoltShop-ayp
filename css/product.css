@@ -1,0 +1,193 @@
+/* ================================================
+   VoltShop — Стили карточки товара (product.css)
+   ================================================ */
+
+.breadcrumbs {
+  font-size: 13px;
+  color: var(--text-3);
+  padding: 18px 0 0;
+}
+.breadcrumbs a { color: var(--accent-2); text-decoration: none; }
+.breadcrumbs a:hover { text-decoration: underline; }
+
+/* Основной двухколоночный блок */
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 44px;
+  padding: 24px 0 36px;
+}
+
+/* Галерея */
+.gallery {}
+
+.main-img {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+  margin-bottom: 12px;
+  transition: background-color 0.25s;
+  user-select: none;
+}
+
+.thumbs { display: flex; gap: 10px; }
+
+.thumb {
+  width: 70px;
+  height: 70px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s;
+  user-select: none;
+}
+.thumb:hover { border-color: var(--border-2); }
+.thumb.active { border-color: var(--accent); background-color: rgba(99,102,241,0.07); }
+
+/* Информация о товаре */
+.brand-tag {
+  display: inline-block;
+  background: rgba(99,102,241,0.1);
+  border: 1px solid rgba(99,102,241,0.2);
+  color: var(--accent-2);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 11px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.prod-info h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.25;
+  color: var(--text-1);
+}
+
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  font-size: 13px;
+  color: var(--text-2);
+}
+
+.in-stock {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--green);
+}
+
+/* Цена */
+.price-block { margin-bottom: 20px; }
+.current-price {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-1);
+  margin-bottom: 3px;
+}
+.old-price-row { display: flex; align-items: center; gap: 8px; }
+.old-price { font-size: 14px; color: var(--text-3); text-decoration: line-through; }
+.discount-chip {
+  background: rgba(239,68,68,0.12);
+  color: #f87171;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+/* Таблица характеристик */
+.specs-table {
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--border);
+}
+.spec-row:last-child { border-bottom: none; }
+.spec-k { color: var(--text-3); }
+.spec-v { font-weight: 500; color: var(--text-1); }
+
+/* Количество */
+.qty-row { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.qty-label { font-size: 13px; color: var(--text-2); }
+
+.qty-ctrl {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.qty-ctrl button {
+  width: 37px;
+  height: 37px;
+  border: none;
+  background: var(--bg-3);
+  font-size: 17px;
+  cursor: pointer;
+  color: var(--text-1);
+  transition: background-color 0.13s, color 0.13s;
+}
+.qty-ctrl button:hover { background: var(--bg-2); color: var(--accent-2); }
+.qty-ctrl span {
+  width: 42px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text-1);
+  background: var(--bg-2);
+}
+
+/* Действия */
+.action-row { display: flex; gap: 10px; margin-bottom: 14px; }
+.btn-big { flex: 1; font-size: 14px; padding: 14px; justify-content: center; }
+.fav-btn { width: 50px; height: 50px; flex-shrink: 0; }
+
+.prod-meta { display: flex; gap: 16px; font-size: 12px; color: var(--text-3); flex-wrap: wrap; }
+
+/* Похожие товары */
+.similar-section { margin-bottom: 44px; }
+.similar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .similar-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .product-detail { grid-template-columns: 1fr; }
+  .similar-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .thumbs { gap: 6px; }
+  .thumb { width: 58px; height: 58px; }
+  .similar-grid { grid-template-columns: 1fr; }
+  .prod-meta { flex-direction: column; gap: 8px; }
+}
