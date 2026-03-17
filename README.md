@@ -23,7 +23,7 @@ voltshop/
 └── README.md
 ```
 
-## 🛠 Технологии (по ТЗ)
+## 🛠 Технологии
 
 | Пункт ТЗ | Требование | Реализация |
 |---|---|---|
@@ -42,5 +42,5 @@ voltshop/
 
 ## ✅ Валидация
 
-- HTML: https://validator.w3.org/ (загрузить файл)
-- CSS: https://jigsaw.w3.org/css-validator/
+- HTML: https://validator.w3.org/ (файл)
+- CSS: https://jigsaw.w3.org/css-validator/ (файл)
